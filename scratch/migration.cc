@@ -654,8 +654,8 @@ int main(int argc, char* argv[])
     RngSeedManager::SetSeed(3); // Changes seed from default of 1 to 3
 
 	numEdgeNodes = numEnbs;
-    serverLoad.reserve(numEdgeNodes);
-    qosValues.reserve(numEdgeNodes);
+    serverLoad.resize(numEdgeNodes);
+    qosValues.resize(numEdgeNodes);
     cellUe.setDimensions(numEnbs, numNodes);
     edgeUe.setDimensions(numEdgeNodes, numNodes);
     edgeMigrationChart.setDimensions(numEdgeNodes, numEdgeNodes);
